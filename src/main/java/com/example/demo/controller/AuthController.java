@@ -81,7 +81,7 @@ public class AuthController {
         return new ResponseEntity<>(new ResponMessage("yes"), HttpStatus.OK);
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/signin") //MAX NGU ĐỒ CON LỢN
     public ResponseEntity<?> login(@Valid @RequestBody SignInForm signInForm) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(signInForm.getUsername(), signInForm.getPassword()));
